@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>รายงานความก้าวหน้า — แบบย่อ</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&family=Noto+Sans+Thai:wght@400;500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/assets/style.css" />
+</head>
+<body>
+  <header class="site-header">
+    <nav class="nav container">
+      <div class="brand">ระบบจัดการโครงงาน</div>
+      <ul class="menu">
+        <li><a href="http://202.44.47.45/fitm/personnel?board_id=3">ติดต่อ</a></li>
+        <li><a href="#">ดาวน์โหลดเอกสาร</a></li>
+        <li><a class="pill active" href="/index.html">logout</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main class="container">
+    <section class="auth">
+      <h1>รายงานความก้าวหน้า</h1>
+
+      <form class="panel form-vertical" action="group-overview.html" method="get" enctype="multipart/form-data" autocomplete="on">
+        <div class="group">
+          <label for="detail">รายละเอียดงานที่ทำ:</label>
+          <input id="detail" name="detail" type="text" placeholder="รายละเอียด" />
+        </div>
+
+        <div class="group">
+          <label for="obstacle">อุปสรรค:</label>
+          <input id="obstacle" name="obstacle" type="text" placeholder="อุปสรรคที่เจอ" />
+        </div>
+
+        <div class="group">
+          <label for="link">แนบลิ้งก์(ถ้ามี):</label>
+          <input id="link" name="link" type="url" placeholder="Link" />
+        </div>
+
+        <div class="group">
+          <label for="file">แนบไฟล์:</label>
+          <input id="file" name="file" type="file" />
+        </div>
+
+        <div class="actions single">
+          <button type="submit" class="btn btn-primary">รายงานความก้าวหน้า</button>
+        </div>
+      </form>
+    </section>
+  </main>
+
+  <footer class="site-footer container">
+    <small>© 2025 Project Management System</small>
+  </footer>
+</body>
+</html>
