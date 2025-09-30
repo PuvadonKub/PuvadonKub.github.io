@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>รายละเอียดคำร้อง — เจ้าหน้าที่</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&family=Noto+Sans+Thai:wght@400;500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/assets/style.css" />
+</head>
+<body>
+<header class="site-header">
+  <nav class="nav container">
+    <div class="brand">ระบบจัดการโครงงาน</div>
+    <ul class="menu">
+      <li><a href="#">ติดต่อ</a></li>
+      <li><a href="#">ดาวน์โหลดเอกสาร</a></li>
+      <li><a class="pill active" href="staff.html">เจ้าหน้าที่</a></li>
+    </ul>
+  </nav>
+</header>
+
+<main class="container">
+  <section class="auth">
+    <h1>รายละเอียดคำร้อง</h1>
+
+    <div class="card">
+      <p class="meta"><strong>กลุ่ม:</strong> TEAM WOLFFIA</p>
+      <p class="meta"><strong>โปรเจกต์:</strong> Smart Hydroponic Monitor</p>
+      <p class="meta"><strong>อาจารย์ที่ปรึกษา:</strong> อ.ดร.พิทย์พิมล ชูรอด</p>
+      <p class="meta"><strong>เอกสาร:</strong> <a class="link" href="#">final-report.pdf</a> • <a class="link" href="#">slides.pdf</a></p>
+      <p class="meta"><strong>สถานะปัจจุบัน:</strong> <span class="chip review">รอตรวจ</span></p>
+
+      <div class="field textarea">
+        <label for="remark">หมายเหตุ/ข้อเสนอแนะ:</label>
+        <textarea id="remark" rows="6">โปรดแนบแผนทดสอบคุณภาพน้ำช่วงสัปดาห์ที่ 6-8 เพิ่มเติม</textarea>
+      </div>
+
+      <div class="actions">
+        <a class="btn btn-outline" href="staff-requests-topic.html">กลับรายการ</a>
+        <button class="btn btn-success" type="button">อนุมัติ</button>
+        <button class="btn btn-danger" type="button">ไม่ผ่าน</button>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="site-footer container">
+  <small>© 2025 Project Management System</small>
+</footer>
+</body>
+</html>
