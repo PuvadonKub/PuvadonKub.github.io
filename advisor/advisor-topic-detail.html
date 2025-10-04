@@ -1,0 +1,88 @@
+<!-- committee-topic-detail.html -->
+<!DOCTYPE html>
+<html lang="th">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>ดูเพิ่มเติม — ยื่นขอสอบ</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&family=Noto+Sans+Thai:wght@400;500;700&display=swap" rel="stylesheet">
+  <link rel="icon" type="image/x-icon" href="/image/favicon.ico" />
+  <link rel="stylesheet" href="/assets/style.css" />
+</head>
+<body>
+<header class="site-header">
+  <nav class="nav container">
+    <div class="brand">ระบบจัดการโครงงาน</div>
+    <ul class="menu">
+      <li><a href="http://202.44.47.45/fitm/personnel?board_id=3">ติดต่อ</a></li>
+      <li><a href="#">ดาวน์โหลดเอกสาร</a></li>
+      <li><a class="pill active" href="advisor.html">advisor</a></li>
+    </ul>
+  </nav>
+</header>
+
+<main class="container">
+  <section class="auth">
+    <h1>ดูเพิ่มเติม — ยื่นขอสอบ</h1>
+
+    <article class="card">
+      <!-- ส่วนหัว -->
+      <p class="meta"><strong>กลุ่ม:</strong> TEAM WOLFFIA</p>
+      <p class="meta"><strong>โปรเจกต์:</strong> Smart Hydroponic Monitor</p>
+
+      <dl class="meta-grid">
+        <div><dt>วันยื่น:</dt><dd>01/10/2568</dd></div>
+        <div><dt>อาจารย์ที่ปรึกษา:</dt><dd>อ.ดร.พิทย์พิมล ชูรอด</dd></div>
+        <div><dt>สถานะคำร้อง:</dt><dd><span class="chip review">รอตรวจ</span></dd></div>
+      </dl>
+
+      <!-- รายละเอียดจาก “หน้ายื่นสอบหัวข้อ” (ใส่ค่าไว้ให้เรียบร้อย) -->
+      <h3 class="section-head">รายละเอียดหัวข้อ</h3>
+      <dl class="kv">
+        <dt>หัวข้อโครงงาน</dt>
+        <dd>Smart Hydroponic Monitor</dd>
+
+        <dt>ผลลัพธ์</dt>
+        <dd>ระบบติดตามคุณภาพน้ำแบบเรียลไทม์ พร้อมแจ้งเตือนเมื่อค่า pH/EC/อุณหภูมิเกินเกณฑ์</dd>
+
+        <dt>วัตถุประสงค์</dt>
+        <dd>
+          1) อ่านค่าพารามิเตอร์น้ำ (pH/EC/Temp) อัตโนมัติทุก 5 นาที<br/>
+          2) แสดงผลบน Dashboard เว็บแบบเรียลไทม์<br/>
+          3) แจ้งเตือนผ่านเว็บเมื่อเกิน Threshold และบันทึกประวัติ
+        </dd>
+
+        <dt>ขอบเขต</dt>
+        <dd>ฮาร์ดแวร์ ESP32 + เซ็นเซอร์, REST API, เว็บแดชบอร์ด; ไม่รวม Mobile App</dd>
+
+        <dt>อาจารย์ที่ปรึกษาคนที่ 2 (ถ้ามี)</dt>
+        <dd>-</dd>
+      </dl>
+
+      <!-- เอกสารประกอบ (ตัวอย่าง) -->
+      <h3 class="section-head">เอกสารประกอบ</h3>
+      <ul class="file-list">
+        <li><a class="link" href="#">Proposal_v1.pdf</a></li>
+        <li><a class="link" href="#">Plan_Testing.pdf</a></li>
+        <li><a class="link" href="#">Demo Link</a> — https://example.com/demo/hydroponic</li>
+      </ul>
+
+      <!-- ปุ่มดำเนินการ -->
+      <div class="controls">
+        <a class="btn btn-outline" href="committee.html">ย้อนกลับ</a>
+        <a class="btn btn-outline" href="committee-reschedule.html">กำหนดเวลาใหม่</a>
+        <button class="btn btn-primary" type="button">บันทึกผล</button>
+        <button class="btn btn-danger" type="button" >สั่งคืน</button>
+      </div>
+    </article>
+  </section>
+</main>
+
+<footer class="site-footer container">
+  <small>© 2025 Project Management System</small>
+</footer>
+</body>
+</html>

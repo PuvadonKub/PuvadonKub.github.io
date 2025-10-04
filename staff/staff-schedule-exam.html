@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>กำหนดการสอบ — เจ้าหน้าที่ (Onsite)</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&family=Noto+Sans+Thai:wght@400;500;700&display=swap" rel="stylesheet">
+  <link rel="icon" type="image/x-icon" href="/image/favicon.ico" />
+  <link rel="stylesheet" href="/assets/style.css" />
+</head>
+<body>
+<header class="site-header">
+  <nav class="nav container">
+    <div class="brand">ระบบจัดการโครงงาน</div>
+    <ul class="menu">
+      <li><a href="http://202.44.47.45/fitm/personnel?board_id=3">ติดต่อ</a></li>
+      <li><a href="#">ดาวน์โหลดเอกสาร</a></li>
+      <li><a class="pill active" href="staff.html">เจ้าหน้าที่</a></li>
+    </ul>
+  </nav>
+</header>
+
+<main class="container">
+  <section class="auth">
+    <h1>กำหนดการสอบ (Onsite)</h1>
+
+    <form class="panel form-grid schedule-grid" action="staff-requests-project.html" method="get" autocomplete="on">
+      <!-- โปรเจกต์ -->
+      <div class="group col-2">
+        <label for="proj">กลุ่ม/โปรเจกต์</label>
+        <input id="proj" type="text" value="TEAM WOLFFIA — Smart Hydroponic Monitor" readonly />
+      </div>
+
+      <!-- วัน/เวลา/สถานที่ -->
+      <div class="group">
+        <label for="date">วันสอบ</label>
+        <input id="date" name="date" type="date" value="2025-03-25" required />
+      </div>
+
+      <div class="group">
+        <label for="start">เวลาเริ่ม</label>
+        <input id="start" name="start" type="time" value="13:00" required />
+      </div>
+
+
+      <div class="group col-2">
+        <label for="room">สถานที่/ห้อง</label>
+        <input id="room" name="room" type="text" placeholder="เช่น ห้อง 305 อาคารเรียนรวม" value="ห้อง 305 อาคารเรียนรวม" required />
+      </div>
+
+      <!-- (ตัดช่องลิงก์ประชุมออก เพราะใช้เฉพาะ Onsite) -->
+
+      <!-- รายชื่อกรรมการ -->
+      <div class="group">
+        <label for="cm1">กรรมการ 1</label>
+        <div class="select">
+          <select id="cm1" name="committee1" required>
+            <option value="" disabled selected>เลือกกรรมการ</option>
+            <option>รศ.ดร.อนิราช มิ่งขวัญ</option>
+            <option>ผศ.อรบุษป์ วุฒิกมลชัย</option>
+            <option>ผศ.ดร.บีสุดา ดาวเรือง</option>
+            <option>ผศ.ดร.ขนิษฐา นามี</option>
+            <option>อ.ดร.กาญจน ณ ศรีธะ</option>
+            <option>ผศ.นพดล บูรณ์กุศล</option>
+            <option>ผศ.จสต.นพเก้า ทองใบ</option>
+            <option>ผศ.ดร.นิติการ นาคเจือทอง</option>
+            <option>ผศ.ดร.นัฎฐพันธ์ นาคพงษ์</option>
+            <option>ผศ.นิมิต ศรีคำทา</option>
+            <option>อ.ดร.พิทย์พิมล ชูรอด</option>
+            <option>ผศ.ดร.พาฝัน ดวงไพศาล</option>
+            <option>อ.ดร.ประดิษฐ์ พิทักษ์เสถียรกุล</option>
+            <option>ผศ.พีระศักดิ์ เสรีกุล</option>
+            <option>ผศ.สมชัย เชียงพงศ์พันธุ์</option>
+            <option>ผศ.ดร.สุปีติ กุลจันทร์</option>
+            <option>ผศ.สิวาลัย จินเจือ</option>
+            <option>ผศ.ดร.สุพาภรณ์ ซิ้มเจริญ</option>
+            <option>ผศ.ดร.ศรายุทธ ธเนศสกุลวัฒนา</option>
+            <option>อ.ดร.ศิรินทรา แว่วศรี</option>
+            <option>อ.ดร.วัชรชัย คงศิริวัฒนา</option>
+            <option>ผศ.ดร.วันทนี ประจวบศุภกิจ</option>
+            <option>รศ.ดร.ยุพิน สรรพคุณ</option>
+          </select>
+        </div>
+      </div>
+
+      <div class="group">
+        <label for="cm2">กรรมการ 2</label>
+        <div class="select">
+          <select id="cm2" name="committee2" required>
+            <option value="" disabled selected>เลือกกรรมการ</option>
+            <option>รศ.ดร.อนิราช มิ่งขวัญ</option>
+            <option>ผศ.อรบุษป์ วุฒิกมลชัย</option>
+            <option>ผศ.ดร.บีสุดา ดาวเรือง</option>
+            <option>ผศ.ดร.ขนิษฐา นามี</option>
+            <option>อ.ดร.กาญจน ณ ศรีธะ</option>
+            <option>ผศ.นพดล บูรณ์กุศล</option>
+            <option>ผศ.จสต.นพเก้า ทองใบ</option>
+            <option>ผศ.ดร.นิติการ นาคเจือทอง</option>
+            <option>ผศ.ดร.นัฎฐพันธ์ นาคพงษ์</option>
+            <option>ผศ.นิมิต ศรีคำทา</option>
+            <option>อ.ดร.พิทย์พิมล ชูรอด</option>
+            <option>ผศ.ดร.พาฝัน ดวงไพศาล</option>
+            <option>อ.ดร.ประดิษฐ์ พิทักษ์เสถียรกุล</option>
+            <option>ผศ.พีระศักดิ์ เสรีกุล</option>
+            <option>ผศ.สมชัย เชียงพงศ์พันธุ์</option>
+            <option>ผศ.ดร.สุปีติ กุลจันทร์</option>
+            <option>ผศ.สิวาลัย จินเจือ</option>
+            <option>ผศ.ดร.สุพาภรณ์ ซิ้มเจริญ</option>
+            <option>ผศ.ดร.ศรายุทธ ธเนศสกุลวัฒนา</option>
+            <option>อ.ดร.ศิรินทรา แว่วศรี</option>
+            <option>อ.ดร.วัชรชัย คงศิริวัฒนา</option>
+            <option>ผศ.ดร.วันทนี ประจวบศุภกิจ</option>
+            <option>รศ.ดร.ยุพิน สรรพคุณ</option>
+          </select>
+        </div>
+      </div>
+
+      <div class="group">
+        <label for="cm3">กรรมการ 3</label>
+        <div class="select">
+          <select id="cm3" name="committee3" required>
+            <option value="" disabled selected>เลือกกรรมการ</option>
+            <option>รศ.ดร.อนิราช มิ่งขวัญ</option>
+            <option>ผศ.อรบุษป์ วุฒิกมลชัย</option>
+            <option>ผศ.ดร.บีสุดา ดาวเรือง</option>
+            <option>ผศ.ดร.ขนิษฐา นามี</option>
+            <option>อ.ดร.กาญจน ณ ศรีธะ</option>
+            <option>ผศ.นพดล บูรณ์กุศล</option>
+            <option>ผศ.จสต.นพเก้า ทองใบ</option>
+            <option>ผศ.ดร.นิติการ นาคเจือทอง</option>
+            <option>ผศ.ดร.นัฎฐพันธ์ นาคพงษ์</option>
+            <option>ผศ.นิมิต ศรีคำทา</option>
+            <option>อ.ดร.พิทย์พิมล ชูรอด</option>
+            <option>ผศ.ดร.พาฝัน ดวงไพศาล</option>
+            <option>อ.ดร.ประดิษฐ์ พิทักษ์เสถียรกุล</option>
+            <option>ผศ.พีระศักดิ์ เสรีกุล</option>
+            <option>ผศ.สมชัย เชียงพงศ์พันธุ์</option>
+            <option>ผศ.ดร.สุปีติ กุลจันทร์</option>
+            <option>ผศ.สิวาลัย จินเจือ</option>
+            <option>ผศ.ดร.สุพาภรณ์ ซิ้มเจริญ</option>
+            <option>ผศ.ดร.ศรายุทธ ธเนศสกุลวัฒนา</option>
+            <option>อ.ดร.ศิรินทรา แว่วศรี</option>
+            <option>อ.ดร.วัชรชัย คงศิริวัฒนา</option>
+            <option>ผศ.ดร.วันทนี ประจวบศุภกิจ</option>
+            <option>รศ.ดร.ยุพิน สรรพคุณ</option>
+          </select>
+        </div>
+      </div>
+
+      <div class="group">
+        <label for="cm4">กรรมการ 4 (ถ้ามี)</label>
+        <div class="select">
+          <select id="cm4" name="committee4">
+            <option selected>ไม่ระบุ</option>
+            <option>รศ.ดร.อนิราช มิ่งขวัญ</option>
+            <option>ผศ.อรบุษป์ วุฒิกมลชัย</option>
+            <option>ผศ.ดร.บีสุดา ดาวเรือง</option>
+            <option>ผศ.ดร.ขนิษฐา นามี</option>
+            <option>อ.ดร.กาญจน ณ ศรีธะ</option>
+            <option>ผศ.นพดล บูรณ์กุศล</option>
+            <option>ผศ.จสต.นพเก้า ทองใบ</option>
+            <option>ผศ.ดร.นิติการ นาคเจือทอง</option>
+            <option>ผศ.ดร.นัฎฐพันธ์ นาคพงษ์</option>
+            <option>ผศ.นิมิต ศรีคำทา</option>
+            <option>อ.ดร.พิทย์พิมล ชูรอด</option>
+            <option>ผศ.ดร.พาฝัน ดวงไพศาล</option>
+            <option>อ.ดร.ประดิษฐ์ พิทักษ์เสถียรกุล</option>
+            <option>ผศ.พีระศักดิ์ เสรีกุล</option>
+            <option>ผศ.สมชัย เชียงพงศ์พันธุ์</option>
+            <option>ผศ.ดร.สุปีติ กุลจันทร์</option>
+            <option>ผศ.สิวาลัย จินเจือ</option>
+            <option>ผศ.ดร.สุพาภรณ์ ซิ้มเจริญ</option>
+            <option>ผศ.ดร.ศรายุทธ ธเนศสกุลวัฒนา</option>
+            <option>อ.ดร.ศิรินทรา แว่วศรี</option>
+            <option>อ.ดร.วัชรชัย คงศิริวัฒนา</option>
+            <option>ผศ.ดร.วันทนี ประจวบศุภกิจ</option>
+            <option>รศ.ดร.ยุพิน สรรพคุณ</option>
+          </select>
+        </div>
+      </div>
+
+      <!-- ข้อความถึงนักศึกษา -->
+      <div class="group col-2">
+        <label for="note">ข้อความถึงนักศึกษา</label>
+        <textarea id="note" name="note" rows="4"
+          placeholder="เช่น เตรียมสไลด์ 15 นาที + Q&A 10 นาที">เตรียมสไลด์ 15 นาที + Q&A 10 นาที</textarea>
+      </div>
+
+      <!-- ปุ่มล่าง -->
+      <div class="form-actions actions">
+        <button class="btn btn-primary" type="submit">บันทึกกำหนดการ</button>
+        <a class="btn btn-secondary" href="staff-requests-project.html">ยกเลิก</a>
+      </div>
+    </form>
+  </section>
+</main>
+
+<footer class="site-footer container">
+  <small>© 2025 Project Management System</small>
+</footer>
+</body>
+</html>
