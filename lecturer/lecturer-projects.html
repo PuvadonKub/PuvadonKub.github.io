@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>ดูโปรเจกต์นักศึกษา — อาจารย์ประจำวิชา</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&family=Noto+Sans+Thai:wght@400;500;700&display=swap" rel="stylesheet">
+  <link rel="icon" type="image/x-icon" href="/image/favicon.ico" />
+  <link rel="stylesheet" href="/assets/style.css" />
+</head>
+<body>
+<header class="site-header">
+  <nav class="nav container">
+    <div class="brand">ระบบจัดการโครงงาน</div>
+    <ul class="menu">
+      <li><a href="http://202.44.47.45/fitm/personnel?board_id=3">ติดต่อ</a></li>
+      <li><a href="#">ดาวน์โหลดเอกสาร</a></li>
+      <li><a class="pill active" href="/index.html">logout</a></li>
+    </ul>
+  </nav>
+</header>
+
+<main class="container">
+  <section class="auth">
+    <h1>ดูโปรเจกต์นักศึกษา</h1>
+
+    <div class="card">
+      <div class="list-stack">
+        <!-- การ์ด 1 -->
+        <article class="request-card">
+            <div class="request-top">
+                <span class="badge-pill accent">(ชื่อโปรเจกต์)</span>
+                <span class="group-name">TEAM WOLFFIA — Smart Hydroponic Monitor</span>
+            </div>
+
+            <div class="progress-row">
+                <span class="chip soft">ความคืบหน้า <b>55%</b></span>
+                <span class="muted">สัปดาห์ที่ 5</span>
+            </div>
+
+            <!-- ฟอร์มคอมเมนต์ (แทนปุ่ม comment เดิม) -->
+            <form class="miniform" id="lec-1" action="#" method="post">
+                <div class="row">
+                <label for="lec-cmt-1">คอมเมนต์ถึงนักศึกษา</label>
+                <textarea id="lec-cmt-1" name="comment" rows="2" placeholder="เขียนคอมเมนต์…"></textarea>
+                </div>
+            </form>
+
+            <div class="controls spread">
+                <div class="left">
+                <a class="btn btn-secondary" href="advisor-project-detail.html">ดูเพิ่มเติม</a>
+                </div>
+                <!-- ปุ่มยืนยัน แทน รับทราบ และส่งฟอร์มข้างบน -->
+                <button class="btn btn-primary btn-sm" type="submit" form="lec-1">ยืนยัน</button>
+            </div>
+        </article>
+
+
+        <!-- การ์ด 2 -->
+        <article class="request-card">
+          <div class="request-top">
+            <span class="badge-pill accent">(ชื่อโปรเจกต์)</span>
+            <span class="group-name">TEAM QUARK — IoT Energy Logger</span>
+          </div>
+
+          <div class="progress-row">
+            <span class="chip soft">ความคืบหน้า <b>45%</b></span>
+            <span class="muted">สัปดาห์ที่ 5</span>
+          </div>
+
+            <!-- ฟอร์มคอมเมนต์ (แทนปุ่ม comment เดิม) -->
+            <form class="miniform" id="lec-1" action="#" method="post">
+                <div class="row">
+                <label for="lec-cmt-1">คอมเมนต์ถึงนักศึกษา</label>
+                <textarea id="lec-cmt-1" name="comment" rows="2" placeholder="เขียนคอมเมนต์…"></textarea>
+                </div>
+            </form>
+
+            <div class="controls spread">
+                <div class="left">
+                <a class="btn btn-secondary" href="advisor-project-detail.html">ดูเพิ่มเติม</a>
+                </div>
+                <!-- ปุ่มยืนยัน แทน รับทราบ และส่งฟอร์มข้างบน -->
+                <button class="btn btn-primary btn-sm" type="submit" form="lec-1">ยืนยัน</button>
+            </div>
+        </article>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="site-footer container">
+  <small>© 2025 Project Management System</small>
+</footer>
+</body>
+</html>
