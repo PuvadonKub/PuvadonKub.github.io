@@ -28,13 +28,11 @@
     <h1>กำหนดการสอบ</h1>
 
     <form class="panel form-grid schedule-grid" action="staff-requests-project.html" method="get" autocomplete="on">
-      <!-- โปรเจกต์ -->
       <div class="group col-2">
         <label for="proj">กลุ่ม/โปรเจกต์</label>
         <input id="proj" type="text" value="TEAM WOLFFIA — Smart Hydroponic Monitor" readonly />
       </div>
 
-      <!-- วัน/เวลา/สถานที่ -->
       <div class="group">
         <label for="date">วันสอบ</label>
         <input id="date" name="date" type="date" value="2025-03-25" required />
@@ -50,10 +48,6 @@
         <label for="room">สถานที่/ห้อง</label>
         <input id="room" name="room" type="text" placeholder="เช่น ห้อง 305 อาคารเรียนรวม" value="ห้อง 305 อาคารเรียนรวม" required />
       </div>
-
-      <!-- (ตัดช่องลิงก์ประชุมออก เพราะใช้เฉพาะ Onsite) -->
-
-      <!-- รายชื่อกรรมการ -->
       <div class="group">
         <label for="cm1">กรรมการ 1</label>
         <div class="select">
@@ -182,14 +176,12 @@
         </div>
       </div>
 
-      <!-- ข้อความถึงนักศึกษา -->
       <div class="group col-2">
         <label for="note">ข้อความถึงนักศึกษา</label>
         <textarea id="note" name="note" rows="4"
           placeholder="เช่น เตรียมสไลด์ 15 นาที + Q&A 10 นาที">เตรียมสไลด์ 15 นาที + Q&A 10 นาที</textarea>
       </div>
 
-      <!-- ปุ่มล่าง -->
       <div class="form-actions actions">
         <button class="btn btn-primary" type="submit">บันทึกกำหนดการ</button>
         <a class="btn btn-secondary" href="staff-requests-project.html">ยกเลิก</a>
