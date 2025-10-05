@@ -8,7 +8,7 @@
   --muted: #6d615a;
   --brand-bar: rgba(193, 166, 140, 0.35);
   --stroke: #e6ceb8;
-  
+
   /* Theme Colors */
   --primary: #f0a44b;
   --primary-ink: #3b2a1a;
@@ -19,19 +19,20 @@
   --danger: #f37c74;
   --danger-ink: #3a1f1f;
   --link: #f0a44b;
-  
+
   /* Spacing & Layout */
   --radius: 18px;
   --radius-sm: 12px;
   --radius-lg: 22px;
-  
+
   /* Shadows */
   --shadow-soft: 0 6px 24px rgba(0, 0, 0, 0.08);
   --shadow-input: 0 2px 0 rgba(0, 0, 0, 0.05), 0 8px 24px rgba(0, 0, 0, 0.06);
-  
+
   /* Typography */
-  --font-ui: "Noto Sans Thai", "Inter", system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
-  
+  --font-ui: "Noto Sans Thai", "Inter", system-ui, -apple-system, "Segoe UI",
+    Roboto, "Helvetica Neue", Arial, sans-serif;
+
   /* Status Colors */
   --status-pending-bg: #fff0c2;
   --status-pending-text: #8a6b00;
@@ -367,6 +368,7 @@ input[type="time"] {
 }
 
 .btn-outline {
+  white-space: nowrap;
   background: transparent;
   color: var(--text);
   box-shadow: inset 0 0 0 2px var(--stroke);
@@ -987,6 +989,89 @@ tr + tr td {
   resize: vertical;
 }
 
+/* ---- detail common ---- */
+.section-head {
+  margin: 12px 2px 8px;
+  font-weight: 800;
+}
+.kv {
+  display: grid;
+  grid-template-columns: 180px 1fr;
+  gap: 10px 14px;
+  margin: 6px 0 10px;
+}
+.kv dt {
+  font-weight: 600;
+  color: var(--muted);
+}
+.kv dd {
+  margin: 0;
+  background: var(--card);
+  box-shadow: var(--shadow-input);
+  border-radius: 16px;
+  padding: 12px 14px;
+}
+.members {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin: 6px 0 10px;
+  padding: 0;
+  list-style: none;
+}
+.member-pill {
+  background: #fff7ef;
+  border-radius: 999px;
+  padding: 6px 10px;
+  box-shadow: inset 0 0 0 1px #ead7c7;
+  font-weight: 600;
+}
+.file-list {
+  margin: 0 0 6px 0;
+  padding-left: 18px;
+}
+.miniform {
+  display: grid;
+  gap: 10px;
+  margin: 10px 0 6px;
+}
+.miniform .row {
+  display: grid;
+  gap: 8px;
+}
+.miniform .row.two {
+  grid-template-columns: 1fr 1fr;
+  gap: 10px;
+}
+
+/* ปุ่ม 3 ช่องในแถวเดียว */
+.miniform .row.three {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 10px;
+}
+
+/* ปุ่ม “ส่งคอมเมนต์” โทนน้ำเงินอ่อนอ่านง่าย */
+.btn-info {
+  background: #e6f0ff;
+  color: #144b8b;
+  font-weight: 700;
+  box-shadow: inset 0 0 0 1px #c8dcff, var(--shadow-soft);
+  border-radius: 14px;
+  padding: 10px 14px;
+}
+
+@media (max-width: 720px) {
+  .miniform .row.three {
+    grid-template-columns: 1fr;
+  }
+  .kv {
+    grid-template-columns: 1fr;
+  }
+  .miniform .row.two {
+    grid-template-columns: 1fr;
+  }
+}
 
 /* ========== Responsive Design (Mobile-First) ========== */
 
@@ -995,7 +1080,7 @@ tr + tr td {
   .form-grid {
     grid-template-columns: 1fr 1fr;
   }
-  
+
   .form-actions {
     grid-template-columns: 180px 180px;
   }
@@ -1006,11 +1091,11 @@ tr + tr td {
   .meta-grid {
     grid-template-columns: repeat(4, 1fr);
   }
-  
+
   .schedule-grid {
     grid-template-columns: 1fr 1fr;
   }
-  
+
   .controls {
     justify-content: flex-end;
   }
@@ -1021,74 +1106,74 @@ tr + tr td {
   .menu {
     gap: 12px;
   }
-  
+
   .menu .pill {
     padding: 6px 8px;
   }
-  
+
   .actions {
     grid-template-columns: 1fr;
   }
-  
+
   .actions.single {
     grid-template-columns: 1fr;
   }
-  
+
   .btn {
     width: 100%;
   }
-  
+
   .btn-xl {
     width: 100%;
   }
-  
+
   .auth-card {
     width: min(100%, 420px);
     gap: 14px;
   }
-  
+
   .field input {
     padding: 14px 16px;
   }
-  
+
   .helper {
     font-size: 13px;
     margin-left: 12px;
   }
-  
+
   .panel {
     width: min(100%, 560px);
     padding: 18px;
   }
-  
+
   .form-vertical {
     gap: 16px;
   }
-  
+
   .form-grid {
     grid-template-columns: 1fr;
   }
-  
+
   .form-actions {
     grid-template-columns: 1fr;
   }
-  
+
   .meta-grid {
     grid-template-columns: 1fr;
   }
-  
+
   .kv {
     grid-template-columns: 1fr;
   }
-  
+
   .miniform .row.two {
     grid-template-columns: 1fr;
   }
-  
+
   .schedule-grid {
     grid-template-columns: 1fr;
   }
-  
+
   .controls {
     justify-content: flex-start;
   }

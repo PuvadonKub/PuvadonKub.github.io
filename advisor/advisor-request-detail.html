@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>รายละเอียดคำขอเป็นที่ปรึกษา</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&family=Noto+Sans+Thai:wght@400;500;700&display=swap" rel="stylesheet">
+  <link rel="icon" type="image/x-icon" href="/image/favicon.ico" />
+  <link rel="stylesheet" href="/assets/style.css" />
+</head>
+<body>
+<header class="site-header">
+  <nav class="nav container">
+    <div class="brand">ระบบจัดการโครงงาน</div>
+    <ul class="menu">
+      <li><a href="http://202.44.47.45/fitm/personnel?board_id=3">ติดต่อ</a></li>
+      <li><a href="#">ดาวน์โหลดเอกสาร</a></li>
+      <li><a class="pill active" href="advisor.html">advisor</a></li>
+    </ul>
+  </nav>
+</header>
+
+<main class="container">
+  <section class="auth">
+    <h1>รายละเอียดคำขอเป็นที่ปรึกษา</h1>
+
+    <article class="card">
+      <!-- ส่วนหัว -->
+      <div class="request-top">
+        <span class="badge-pill accent">(ชื่อโปรเจกต์)</span>
+        <span class="group-name">TEAM WOLFFIA — Smart Hydroponic Monitor</span>
+      </div>
+
+      <!-- สรุปย่อ -->
+      <dl class="meta-grid">
+        <div><dt>วันที่ร้องขอ</dt><dd>12/02/2568</dd></div>
+        <div><dt>สาขา</dt><dd>INET</dd></div>
+        <div><dt>ประเภท</dt><dd>ซอฟต์แวร์</dd></div>
+      </dl>
+
+      <!-- สมาชิก -->
+      <h3 class="section-head">สมาชิกกลุ่ม</h3>
+      <ul class="members">
+        <li class="member-pill">6806022510999 นายหนึ่ง มากมาก — INET</li>
+        <li class="member-pill">6806022510123 นางสาวสอง ดีมาก — INET</li>
+      </ul>
+
+      <!-- ข้อมูลโปรเจกต์ -->
+      <h3 class="section-head">ข้อมูลโปรเจกต์</h3>
+      <dl class="kv">
+        <dt>ชื่อโปรเจกต์</dt>
+        <dd>Smart Hydroponic Monitor</dd>
+
+        <dt>คำอธิบาย</dt>
+        <dd>ระบบติดตามคุณภาพน้ำแบบเรียลไทม์ พร้อมแจ้งเตือนเมื่อค่า pH/EC/อุณหภูมิเกินเกณฑ์ และบันทึกประวัติบนแดชบอร์ด</dd>
+
+        <dt>วัตถุประสงค์</dt>
+        <dd>1) วัด pH/EC/อุณหภูมิ อัตโนมัติ 2) แสดงผลบน Dashboard 3) แจ้งเตือนเมื่อเกิน Threshold</dd>
+
+        <dt>ขอบเขต</dt>
+        <dd>ESP32 + เซนเซอร์, REST API, เว็บแดชบอร์ด (ไม่รวม Mobile App)</dd>
+      </dl>
+
+      <!-- อาจารย์ที่นักศึกษาขอ -->
+      <h3 class="section-head">อาจารย์ที่นักศึกษาขอ</h3>
+      <ul class="file-list">
+        <li>ที่ปรึกษาหลัก: อ.ดร.พิทย์พิมล ชูรอด</li>
+        <li>ที่ปรึกษาร่วม (ถ้ามี): ผศ.อรบุษป์ วุฒิกมลชัย</li>
+      </ul>
+
+      <!-- เอกสาร/ลิงก์แนบ -->
+      <h3 class="section-head">เอกสารที่แนบ</h3>
+      <ul class="file-list">
+        <li><a class="link" href="#">Proposal_v1.pdf</a></li>
+        <li><a class="link" href="#">Gantt_chart.pdf</a></li>
+        <li><a class="link" href="#">Demo URL</a> — https://example.com/demo/hydroponic</li>
+      </ul>
+
+      <!-- ฟอร์มตอบรับ/ปฏิเสธ -->
+      <form class="miniform" action="advisor-requests.html" method="get" id="ad-accept">
+        <div class="field textarea">
+          <label for="textarea">หมายเหตุถึงนักศึกษา</label>
+          <textarea id="textarea" name="note" rows="3" placeholder="ข้อเสนอแนะ/เงื่อนไขก่อนรับเป็นที่ปรึกษา…"></textarea>
+          <a class="btn btn-info" type="submit" name="decision" value="comment">ส่งคอมเมนต์</a>
+        </div>
+        <input type="hidden" name="group_id" value="WOLFFIA-2568" />
+        <div class="row two">
+          <button class="btn btn-success" type="submit" name="decision" value="accept">รับเป็นที่ปรึกษา</button>
+          <button class="btn btn-danger" type="submit" name="decision" value="reject">ไม่รับ</button>
+          
+        </div>
+      </form>
+
+      <!-- ปุ่มล่าง -->
+      <div class="controls">
+        <a class="btn btn-outline" href="advisor-requests.html">ย้อนกลับ</a>
+      </div>
+    </article>
+  </section>
+</main>
+
+<footer class="site-footer container">
+  <small>© 2025 Project Management System</small>
+</footer>
+</body>
+</html>
