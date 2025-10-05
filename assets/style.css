@@ -1061,6 +1061,11 @@ tr + tr td {
   padding: 10px 14px;
 }
 
+.hide p,a{
+  text-decoration: none;
+  color: #ffc57a;
+}
+
 @media (max-width: 720px) {
   .miniform .row.three {
     grid-template-columns: 1fr;
