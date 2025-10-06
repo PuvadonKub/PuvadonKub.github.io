@@ -994,6 +994,30 @@ tr + tr td {
   resize: vertical;
 }
 
+/* ========== Staff Request Detail Layout ========== */
+.request-details-section {
+  display: grid;
+  gap: 24px;
+  margin-bottom: 24px;
+  padding-bottom: 20px;
+  border-bottom: 2px solid var(--stroke);
+}
+
+.project-info {
+  display: grid;
+  gap: 8px;
+}
+
+.project-info .meta {
+  margin: 0;
+  padding: 8px 0;
+  border-bottom: 1px solid rgba(0,0,0,0.05);
+}
+
+.project-info .meta:last-child {
+  border-bottom: none;
+}
+
 /* ========== Group Review Page Layout ========== */
 .project-info-section {
   display: grid;
@@ -1200,7 +1224,7 @@ tr + tr td {
 .advisor-comment-section {
   margin-bottom: 28px;
   padding-bottom: 24px;
-  border-bottom: 1px solid var(--stroke);
+  border-bottom: 2px solid var(--stroke);
 }
 
 .comment-header h3 {
@@ -1288,8 +1312,7 @@ tr + tr td {
 .final-btn {
   background: var(--success);
   color: var(--success-ink);
-  font-size: 15px;
-  padding: 14px 24px;
+  font-size: 14px;
   box-shadow: var(--shadow-soft);
 }
 
@@ -1463,6 +1486,11 @@ tr + tr td {
   .project-meta-grid {
     grid-template-columns: repeat(2, 1fr);
   }
+  
+  .request-details-section {
+    grid-template-columns: 1fr 1fr;
+    gap: 32px;
+  }
 }/* Mobile-only adjustments */
 @media (max-width: 767px) {
   .menu {
@@ -1570,6 +1598,11 @@ tr + tr td {
   .project-header {
     flex-direction: column;
     align-items: flex-start;
+  }
+  
+  .request-details-section {
+    grid-template-columns: 1fr;
+    gap: 20px;
   }
   
   .action-btn {
