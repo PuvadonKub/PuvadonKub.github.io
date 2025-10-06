@@ -28,21 +28,22 @@
     <h1>รายละเอียดคำร้อง</h1>
 
     <div class="card">
-      <div class="request-details-section">
+      <!-- ข้อมูลกลุ่มและโครงงาน + สมาชิก -->
+      <div class="project-info-section">
         <div class="project-info">
           <p class="meta"><strong>กลุ่ม:</strong> TEAM WOLFFIA</p>
-          <p class="meta"><strong>โปรเจกต์:</strong> Smart Hydroponic Monitor</p>
+          <p class="meta"><strong>โครงงาน:</strong> Smart Hydroponic Monitor</p>
           <p class="meta"><strong>อาจารย์ที่ปรึกษา:</strong> อ.ดร.พิทย์พิมล ชูรอด</p>
-          <p class="meta"><strong>เอกสาร:</strong> <a class="link" href="#">final-report.pdf</a> • <a class="link" href="#">slides.pdf</a></p>
-          <p class="meta"><strong>สถานะปัจจุบัน:</strong> <span class="chip review">รอตรวจ</span></p>
+          <p class="meta"><strong>เอกสาร:</strong> <a class="link" href="#">request-project.pdf</a> • <a class="link" href="#">slides.pdf</a></p>
+          <p class="meta"><strong>สถานะ:</strong> <span class="chip review">รอตรวจ</span></p>
         </div>
 
         <div class="members-section">
-          <h3 class="members-title">สมาชิกในกลุ่ม</h3>
+          <h3>สมาชิกในกลุ่ม</h3>
           <div class="members-list">
             <div class="member-item">
-              <span class="member-id">6806022510999</span>
-              <span class="member-name">นายหนึ่ง มากมาก</span>
+              <span class="member-id">6806022510131</span>
+              <span class="member-name">นายภูวดล เวชชนะ</span>
               <span class="member-department">INET</span>
             </div>
             <div class="member-item">
@@ -50,18 +51,35 @@
               <span class="member-name">นางสาวสอง ดีมาก</span>
               <span class="member-department">INET</span>
             </div>
-            <div class="member-item">
-              <span class="member-id">6806022510456</span>
-              <span class="member-name">นายสาม ดีเด่น</span>
-              <span class="member-department">INET</span>
-            </div>
           </div>
         </div>
       </div>
 
+      <!-- รายละเอียดโครงงาน -->
+      <div class="project-details">
+        <h3>รายละเอียดโครงงาน</h3>
+        <dl class="kv">
+          <dt>ผลลัพธ์ที่คาดหวัง</dt>
+          <dd>ระบบติดตามคุณภาพน้ำแบบเรียลไทม์ พร้อมแจ้งเตือนเมื่อค่า pH/EC/อุณหภูมิเกินเกณฑ์</dd>
+
+          <dt>วัตถุประสงค์</dt>
+          <dd>
+            1) อ่านค่าพารามิเตอร์น้ำ (pH/EC/Temp) อัตโนมัติทุก 5 นาที<br/>
+            2) แสดงผลบน Dashboard เว็บแบบเรียลไทม์<br/>
+            3) แจ้งเตือนผ่านเว็บเมื่อเกิน Threshold และบันทึกประวัติ
+          </dd>
+
+          <dt>ขอบเขตงาน</dt>
+          <dd>ฮาร์ดแวร์ ESP32 + เซ็นเซอร์, REST API, เว็บแดชบอร์ด; ไม่รวม Mobile App</dd>
+
+          <dt>อาจารย์ที่ปรึกษาคนที่ 2</dt>
+          <dd>-</dd>
+        </dl>
+      </div>
+
       <div class="field textarea">
         <label for="remark">หมายเหตุ/ข้อเสนอแนะ:</label>
-        <textarea id="remark" rows="6">โปรดแนบแผนทดสอบคุณภาพน้ำช่วงสัปดาห์ที่ 6-8 เพิ่มเติม</textarea>
+        <textarea id="remark" rows="4" placeholder="Comment..."></textarea>
         <button class="btn btn-info" style="width: 100%; white-space: nowrap;" type="submit" name="decision" value="comment">ส่งคอมเมนต์</button>
       </div>
 

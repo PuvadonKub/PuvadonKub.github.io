@@ -786,6 +786,12 @@ tr + tr td {
   box-shadow: var(--shadow-input);
 }
 
+.bott {
+  margin-bottom: 24px;
+  padding-bottom: 20px;
+  border-bottom: 2px solid var(--stroke);
+}
+
 .schedule-grid {
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -1022,14 +1028,14 @@ tr + tr td {
 .project-info-section {
   display: grid;
   gap: 24px;
-  margin-bottom: 24px;
-  padding-bottom: 20px;
-  border-bottom: 1px solid var(--stroke);
 }
 
 .project-details {
   display: grid;
   gap: 12px;
+  margin-bottom: 24px;
+  padding-bottom: 20px;
+  border-bottom: 2px solid var(--stroke);;
 }
 
 .project-info-item {
@@ -1060,6 +1066,7 @@ tr + tr td {
 
 .members-section {
   margin-top: 8px;
+
 }
 
 .members-title {
@@ -1393,6 +1400,30 @@ tr + tr td {
   color: #ffc57a;
 }
 
+/* Staff request detail layout */
+.project-info {
+  margin-bottom: 24px;
+  padding-bottom: 20px;
+  border-bottom: 1px solid var(--border-color, #e5d5c8);
+}
+
+.members-section {
+  margin-bottom: 24px;
+  padding-bottom: 20px;
+}
+
+.project-details {
+  margin-bottom: 24px;
+}
+
+.project-details h3,
+.members-section h3 {
+  margin: 0 0 16px 0;
+  font-size: 1.1rem;
+  color: var(--primary-ink);
+  font-weight: 600;
+}
+
 /* เส้น Project ซ้าย + สมาชิกขวา */
 .project-row{
   display:flex;
@@ -1437,17 +1468,12 @@ tr + tr td {
      padding:4px 10px; */
 }
 
-/* มือถือ: ถ้าขึ้นบรรทัดใหม่ ให้ยังคงชิดขวาเต็มแถว */
-@media (max-width: 720px){
-  .members-block{ width:100%; }
-}
-
-
 
 @media (max-width: 720px) {
   .miniform .row.three {
     grid-template-columns: 1fr;
   }
+  .members-block{ width:100%; }
   .members-inline{
     width: 100%;            /* กินทั้งแถว */
     justify-content: flex-end;

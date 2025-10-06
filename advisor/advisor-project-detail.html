@@ -35,9 +35,8 @@
       </div>
 
       <dl class="meta-grid">
-        <div><dt>อาจารย์ที่ปรึกษา</dt><dd>อ.ดร.พิทย์พิมล ชูรอด</dd></div>
-        <div><dt>สาขา</dt><dd>INET</dd></div>
-        <div><dt>สถานะ</dt><dd><span class="chip pending">ระหว่างดำเนินการ</span></dd></div>
+        <div><dt>สาขา: </dt><dd>INET</dd></div>
+        <div><dt>สถานะ:</dt><dd><span class="chip pending">ระหว่างดำเนินการ</span></dd></div>
       </dl>
 
       <div class="progress-row">
@@ -48,24 +47,6 @@
         <div class="bar" style="width:55%"></div>
       </div>
 
-      <!-- ฟอร์มสั้น: คอมเมนต์ + ปรับเปอร์เซ็นต์ -->
-      <form class="miniform" id="pf-1" action="#" method="post">
-        <div class="row">
-          <label for="cmt-detail">คอมเมนต์ถึงนักศึกษา</label>
-          <textarea id="cmt-detail" class="cmt-detail" name="comment" rows="3"
-            placeholder="ให้คำแนะนำ/สิ่งที่ต้องแก้ไข เช่น ปรับความถี่การเก็บข้อมูลเป็นทุก 5 นาที">ขอเพิ่มกราฟเทียบค่า pH/EC รายสัปดาห์ และสรุปช่วงที่เกินเกณฑ์</textarea>
-        </div>
-
-        <div class="row two">
-          <div class="field suffix">
-            <label for="prog-detail">ความคืบหน้า</label>
-            <input id="prog-detail" name="progress" type="number" min="0" max="100" step="5" value="55" />
-            <span class="suffix-unit">%</span>
-          </div>
-        </div>
-      </form>
-
-  
       <h3 class="section-head">รายละเอียดโปรเจกต์</h3>
       <dl class="kv">
         <dt>คำอธิบาย</dt>
@@ -96,16 +77,34 @@
       <h3 class="section-head">ความคืบหน้ารายสัปดาห์</h3>
       <ul class="timeline">
         <li>
-          <strong>สัปดาห์ที่ 6</strong>
+          <strong>สัปดาห์ที่ 5</strong>
           <span class="time">อัปเดต 10/02/2568</span>
-          เชื่อมต่อ API สำเร็จ + ปรับแดชบอร์ดกราฟเส้น
+          เชื่อมต่อ API สำเร็จ + ปรับแดชบอร์ดกราฟเส้น <br>
+          อุปสรรค: ไม่มี
         </li>
         <li>
-          <strong>สัปดาห์ที่ 5</strong>
+          <strong>สัปดาห์ที่ 4</strong>
           <span class="time">อัปเดต 03/02/2568</span>
-          ติดตั้งเซนเซอร์ครบ + ทดสอบอ่านค่าพื้นฐาน
+          ติดตั้งเซนเซอร์ครบ + ทดสอบอ่านค่าพื้นฐาน <br>
+          อุปสรรค: ต่อเซนเซอร์ผิด ค่าไม่ขึ้น
         </li>
       </ul>
+            <!-- ฟอร์มสั้น: คอมเมนต์ + ปรับเปอร์เซ็นต์ -->
+      <form class="miniform" id="pf-1" action="advisor-projects.html" method="get">
+        <div class="row">
+          <label for="cmt-detail">คอมเมนต์ถึงนักศึกษา</label>
+          <textarea id="cmt-detail" class="cmt-detail" name="comment" rows="3"
+            placeholder="ให้คำแนะนำ/สิ่งที่ต้องแก้ไข เช่น ปรับความถี่การเก็บข้อมูลเป็นทุก 5 นาที">ขอเพิ่มกราฟเทียบค่า pH/EC รายสัปดาห์ และสรุปช่วงที่เกินเกณฑ์</textarea>
+        </div>
+
+        <div class="row two">
+          <div class="field suffix">
+            <label for="prog-detail">ความคืบหน้า</label>
+            <input id="prog-detail" name="progress" type="number" min="0" max="100" step="5" value="55" />
+            <span class="suffix-unit">%</span>
+          </div>
+        </div>
+      </form>
       <div class="controls">
         <a class="btn btn-outline" href="advisor-projects.html">ย้อนกลับ</a>
         <button class="btn btn-primary btn-sm" type="submit" form="pf-1">บันทึก</button>
