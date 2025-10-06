@@ -27,17 +27,58 @@
       <h1>ชื่อกลุ่ม: TEAM Project</h1>
 
       <div class="panel">
-        <p class="meta"><strong>Project:</strong> Smart Hydroponic Monitor</p>
-        <p class="meta"><strong>สถานะ:</strong> process/ยื่นสอบ/แก้ไข/รอยืนยัน</p>
-
-        <div class="field textarea">
-          <label for="comment">Comment:</label>
-          <textarea id="comment" rows="6">ไม่มีคอมเม้น</textarea>
+        <!-- Project Info & Members Section -->
+        <div class="project-info-section">
+          <div class="project-details">
+            <div class="project-info-item">
+              <strong>Project:</strong>
+              <span>Smart Hydroponic Monitor</span>
+            </div>
+            <div class="project-info-item">
+              <strong>สถานะ:</strong>
+              <span class="status-badge pending">กำลังดำเนินการ</span>
+            </div>
+            <div class="project-info-item">
+              <strong>Pin-Group:</strong>
+              <span class="group-pin">PJ1112</span>
+            </div>
+          </div>
+          
+          <div class="members-section">
+            <h3 class="members-title">สมาชิกในกลุ่ม</h3>
+            <div class="members-list">
+              <div class="member-item">
+                <span class="member-id">6806022510131</span>
+                <span class="member-name">นายภูวดล เวชชนะ</span>
+                <span class="member-department">INET</span>
+              </div>
+              <div class="member-item">
+                <span class="member-id">6806022510123</span>
+                <span class="member-name">นางสาวสอง ดีมาก</span>
+                <span class="member-department">INET</span>
+              </div>
+            </div>
+          </div>
         </div>
 
-        <div class="actions">
-          <a class="btn btn-primary" style="text-align: center; text-decoration: none;" href="submit-topic.html">ยื่นขอสอบหัวข้อ</a>
-          <a class="btn btn-secondary" style="text-align: center; text-decoration: none;">ยกเลิกยื่น</a>
+        <!-- Comment Section -->
+        <div class="comment-section">
+          <div class="field textarea">
+            <label for="comment">ความคิดเห็น / หมายเหตุ:</label>
+            <textarea id="comment" rows="4" placeholder="เพิ่มความคิดเห็นหรือหมายเหตุ...">ไม่มีคอมเม้น</textarea>
+          </div>
+        </div>
+
+        <!-- Action Buttons -->
+        <div class="actions group-review-actions">
+          <a class="btn btn-primary" href="submit-topic.html">
+            <i class="icon">📝</i>
+            ยื่นขอสอบหัวข้อ
+          </a>
+          <button class="btn btn-secondary" type="button">
+            <i class="icon">❌</i>
+            ยกเลิกยื่น
+          </button>
         </div>
       </div>
     </section>

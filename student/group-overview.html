@@ -24,30 +24,77 @@
 
   <main class="container">
     <section class="auth">
-      <h1>ชื่อกลุ่ม: TEAM Project</h1>
+      <h1>ชื่อกลุ่ม: TEAM WOLFFIA</h1>
 
       <div class="panel">
-        <p class="meta"><strong>Project:</strong> Smart Hydroponic Monitor</p>
-        <div class="progress-row">
-          <span class="badge-progress">ความคืบหน้า <strong>55%</strong></span>
-        </div>
-        <p class="meta"><strong>สัปดาห์ที่:</strong> 5</p>
-        <p class="meta"><strong>สถานะ:</strong> process</p>
-
-        <div class="field textarea">
-          <label for="comment">Comment:</label>
-          <textarea id="comment" rows="6">อาจารย์ที่ปรึกษา:
-          ลองแก้ไข UI ของเว็บแสดงผลหน่อย</textarea>
-        </div>
-      
-        <div class="actions">
-          <a href="report-progress.html" class="btn btn-primary" style="height: fit-content; text-align: center;">รายงานความก้าวหน้า</a>
-          <div class="btn-stack">
-            <a class="btn btn-secondary" href="submit-100.html" style="width: 100%;; text-align: center;">ยื่นสอบ</a>
-            <small class="btn-note">ความคืบหน้า 100%</small>
+        <!-- Project Overview Section -->
+        <div class="project-overview-section">
+          <div class="project-header">
+            <h2 class="project-name">Smart Hydroponic Monitor</h2>
+          </div>
+          
+          <!-- Progress Section -->
+          <div class="progress-section">
+            <div class="progress-info">
+              <div class="progress-label">
+                <span>ความคืบหน้าโครงการ</span>
+                <span class="progress-percentage">55%</span>
+              </div>
+              <div class="progress big">
+                <div class="bar" style="width: 55%;"></div>
+              </div>
+            </div>
+            <div class="project-meta-grid">
+              <div class="meta-item">
+                <span class="meta-label">สัปดาห์ที่:</span>
+                <span class="meta-value">5</span>
+              </div>
+              <div class="meta-item">
+                <span class="meta-label">สถานะ:</span>
+                <span class="meta-value">กำลังดำเนินการ</span>
+              </div>
+            </div>
           </div>
         </div>
-        <center><a href="upload-final.html" class="btn btn-primary" style="height: fit-content; text-align: center;">ส่ง Final</a></center>
+
+        <!-- Advisor Comment Section -->
+        <div class="advisor-comment-section">
+          <div class="comment-header">
+            <h3>ความคิดเห็นจากอาจารย์ที่ปรึกษา</h3>
+          </div>
+          <div class="comment-content">
+            <div class="comment-box">
+              <div class="comment-author">อาจารย์ที่ปรึกษา:</div>
+              <div class="comment-text">ลองแก้ไข UI ของเว็บแสดงผลหน่อย</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Action Section -->
+        <div class="overview-actions">
+          <div class="primary-actions">
+            <a href="report-progress.html" class="btn btn-primary action-btn">
+              <i class="icon">📊</i>
+              <span>รายงานความก้าวหน้า</span>
+            </a>
+            
+            <div class="conditional-action">
+              <a class="btn btn-secondary action-btn" href="submit-100.html">
+                <i class="icon">📝</i>
+                <span>ยื่นสอบ</span>
+              </a>
+              <small class="action-note">*ต้องมีความคืบหน้า 100%</small>
+            </div>
+            <div class="final-submission">
+              <a href="upload-final.html" class="btn btn-success action-btn final-btn">
+                <i class="icon">📤</i>
+                <span>ส่งงานฉบับสุดท้าย</span>
+              </a>
+            </div>
+          </div>
+          
+         
+        </div>
       </div>
     </section>
   </main>
