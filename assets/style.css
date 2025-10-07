@@ -131,6 +131,7 @@ label {
 
 .menu .active {
   background: #ead7c7;
+  white-space: nowrap;
 }
 
 /* Footer */
@@ -1519,6 +1520,9 @@ tr + tr td {
   }
 }/* Mobile-only adjustments */
 @media (max-width: 767px) {
+  .menu {
+    font-size: 13px;
+  }
   .menu {
     gap: 12px;
   }
