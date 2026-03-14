@@ -3,184 +3,137 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>เค้าขอโทษนะ... 🥺</title>
+    <title>Evidence of My Heart</title>
     <style>
-        /* ตั้งค่าพื้นฐาน */
-        * { box-sizing: border-box; margin: 0; padding: 0; }
+        body { font-family: 'Tahoma', 'Kanit', sans-serif; background-color: #f4f7f6; margin: 0; padding: 20px; transition: 0.8s; }
+        .browser-window { max-width: 700px; margin: 40px auto; background: white; border-radius: 12px; box-shadow: 0 15px 35px rgba(0,0,0,0.1); overflow: hidden; }
+        .header { background: #4a4a4a; color: white; padding: 12px 20px; font-size: 13px; display: flex; justify-content: space-between; align-items: center; }
+        .profile-pic-header { width: 25px; height: 25px; border-radius: 50%; background: #ccc; margin-left: 10px; border: 1px solid white; display: inline-block; vertical-align: middle; }
         
-        body {
-            font-family: 'Tahoma', sans-serif;
-            background-color: #fff0f3;
-            height: 100vh;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            overflow: hidden; /* กันสกอร์บาร์โผล่ตอนหัวใจลอย */
+        .history-list { list-style: none; padding: 0; margin: 0; }
+        .history-item { padding: 18px 25px; border-bottom: 1px solid #f0f0f0; display: flex; align-items: center; }
+        .time { width: 70px; color: #bbb; font-size: 11px; }
+        .title { flex-grow: 1; color: #2c3e50; font-size: 15px; }
+        .status { font-weight: bold; font-size: 11px; padding: 4px 10px; border-radius: 20px; }
+        .status-plan { background: #e8f5e9; color: #2e7d32; }
+        .status-oops { background: #fff3e0; color: #ef6c00; }
+        
+        /* หน้าคำขอโทษ */
+        #sorry-page { display: none; text-align: center; padding: 60px 40px; background: #fff; max-width: 600px; margin: 40px auto; border-radius: 20px; box-shadow: 0 20px 40px rgba(0,0,0,0.05); }
+        .heart { color: #e74c3c; font-size: 50px; margin-bottom: 15px; animation: beat 1.2s infinite; }
+        @keyframes beat {
+            0% { transform: scale(1); }
+            50% { transform: scale(1.2); }
+            100% { transform: scale(1); }
         }
 
-        /* กล่องข้อความ Responsive */
-        .card {
-            background: white;
-            width: 90%;
-            max-width: 400px;
-            padding: 30px 20px;
-            border-radius: 25px;
-            box-shadow: 0 10px 30px rgba(255, 77, 109, 0.2);
-            text-align: center;
-            position: relative;
-            z-index: 10;
+        .message { line-height: 1.8; color: #555; font-size: 17px; text-align: left; }
+        
+        /* กล่องดอกไม้ */
+        .flower-box { 
+            background: #fff4f4; 
+            border: 1px dashed #ffb6b9; 
+            padding: 15px; 
+            border-radius: 10px; 
+            margin-top: 25px; 
+            text-align: center; 
+            color: #d63031; 
+            font-weight: bold; 
+            font-size: 16px; 
+        }
+        /* รูปดอกไม้ */
+        .flower-image { 
+            width: 100px; 
+            width: 50%; 
+            margin-top: 10px; 
+            border-radius: 5px; 
         }
 
-        h1 { color: #ff4d6d; font-size: 1.8rem; margin-bottom: 15px; }
-        p { color: #555; font-size: 1.1rem; line-height: 1.5; margin-bottom: 30px; }
-
-        /* ส่วนของปุ่ม */
-        .btn-group {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            gap: 15px;
-            min-height: 50px;
-        }
-
-        button {
-            padding: 12px 25px;
-            font-size: 1rem;
-            border: none;
-            border-radius: 50px;
-            cursor: pointer;
-            font-weight: bold;
-            transition: transform 0.2s;
-            touch-action: manipulation;
-        }
-
-        #yesBtn { background-color: #ff4d6d; color: white; }
-        #yesBtn:active { transform: scale(0.9); }
-
-        #noBtn {
-            background-color: #eeeeee;
-            color: #888;
-            position: relative; 
-            z-index: 999;
-        }
-
-        /* หัวใจลอย */
-        .heart {
-            position: absolute;
-            pointer-events: none;
-            animation: float 4s linear forwards;
-            z-index: 1;
-        }
-
-        @keyframes float {
-            0% { transform: translateY(100vh) scale(0); opacity: 1; }
-            100% { transform: translateY(-10vh) scale(1.5); opacity: 0; }
-        }
-
-        /* ปรับแต่งสำหรับหน้าจอเล็กมาก */
-        @media (max-width: 320px) {
-            h1 { font-size: 1.5rem; }
-            p { font-size: 1rem; }
-        }
+        button { background: #2c3e50; color: white; border: none; padding: 12px 30px; border-radius: 25px; cursor: pointer; font-size: 15px; margin-top: 30px; transition: 0.3s; }
+        button:hover { background: #e74c3c; transform: scale(1.05); }
     </style>
 </head>
 <body>
 
-    <div class="card" id="mainCard">
-        <div id="content">
-            <h1 id="title">ดีกันนะ... 🥺</h1>
-            <p id="desc">เค้าสำนึกผิดแล้ววว<br>หายโกรธเค้านะครับหมูน้อย 🐷</p>
-            <div class="btn-group">
-                <button id="yesBtn" onclick="accept()">หายงอนแล้ว</button>
-                <button id="noBtn" onmouseover="moveBtn()" onclick="moveBtn()">ไม่หาย!</button>
+<div class="browser-window" id="main-content">
+    <div class="header">
+        <div>
+            <span>History Log - Latest Activity</span>
             </div>
+        <span>● ● ●</span>
+    </div>
+    
+    <ul class="history-list">
+        <li class="history-item">
+            <span class="time">24 ก.พ.</span>
+            <span class="title">Tiktok: ที่พัก 2 วัน 1 คืน บางแสน</span>
+            <span class="status status-plan">CHECKED ✓</span>
+        </li>
+        <li class="history-item">
+            <span class="time">24 ก.พ.</span>
+            <span class="title">คำนวณเงินที่ต้องใช้ไป</span>
+            <span class="status status-plan">MEMO 📝</span>
+        </li>
+        <li class="history-item" style="background: #fffdf0;">
+            <span class="time">20:30</span>
+            <span class="title">**เริ่มแผนแกล้งลืมทริปทะเล**</span>
+            <span class="status status-oops">BAD IDEA! ❌</span>
+        </li>
+        <li class="history-item">
+            <span class="time">21:00</span>
+            <span class="title">วิธีง้อแฟนให้หายโกรธ</span>
+            <span class="status status-plan">SEARCH 🔍</span>
+        </li>
+        <li class="history-item">
+            <span class="time">21:05</span>
+            <span class="title">ดอกไม้ที่ความหมายแปลว่าขอโทษ</span>
+            <span class="status status-plan">SEARCH 🌷</span>
+        </li>
+        <li class="history-item">
+            <span class="time">Now</span>
+            <span class="title">ความรู้สึกตอนนี้: สำนึกผิดมาก และอยากขอโทษที่สุดในโลก</span>
+            <span class="status status-oops">SAD 😭</span>
+        </li>
+    </ul>
+
+    <div style="padding: 35px; text-align: center;">
+        <p style="color: #888; font-size: 14px;">พบความจริงที่ซ่อนอยู่ในประวัติการใช้งาน...</p>
+        <button onclick="showSorry()">อ่านคำสารภาพผิดของผม</button>
+    </div>
+</div>
+
+<div id="sorry-page">
+
+    <div class="heart">❤️</div>
+    <h2>"ขอโทษที่แกล้งแรงไปนะ"</h2>
+    <div class="message">
+        <p>จริงๆ แล้ว ทริปทะเลครั้งนี้เค้าไม่ได้ลืมเลยจริงๆนะ...</p>
+        <p>จริงๆตอนนั้นเค้าแค่อยากแกล้งเล่นจริงๆ แล้วไม่ได้คิดเลยว่าเธอจะโกรธขนาดนั้น</p>
+        <p><strong>เค้าขอโทษจริงๆ ครับ...</strong> เสียใจที่ทำให้เธอต้องโกรธ</p>
+        <p>ยกโทษให้เค้าเถอะนะ ต่อไปสัญญาว่าจะไม่เล่นแบบนี้อีกแล้วครับ</p>
+        
+        <div class="flower-box">
+            🌷 ดอกไม้ที่ความหมายแปลว่าขอโทษ 🌷
+            <br>
+            <img src="Yellow_rose.jpg" alt="Flower for you" class="flower-image">
         </div>
     </div>
+    <button onclick="goBack()">กลับไปหน้าแรก ↩️</button>
+</div>
 
-    <script>
-        function moveBtn() {
-            const btn = document.getElementById('noBtn');
+<script>
+    function showSorry() {
+        document.getElementById('main-content').style.display = 'none';
+        document.getElementById('sorry-page').style.display = 'block';
+        document.body.style.backgroundColor = "#ffebee";
+    }
 
-            btn.style.position = 'fixed';
+    function goBack() {
+        document.getElementById('sorry-page').style.display = 'none';
+        document.getElementById('main-content').style.display = 'block';
+        document.body.style.backgroundColor = "#f4f7f6";
+    }
+</script>
 
-            const padding = 20;
-            const maxX = window.innerWidth - btn.offsetWidth - padding;
-            const maxY = window.innerHeight - btn.offsetHeight - padding;
-            
-            const randomX = Math.max(padding, Math.floor(Math.random() * maxX));
-            const randomY = Math.max(padding, Math.floor(Math.random() * maxY));
-            
-            btn.style.left = randomX + 'px';
-            btn.style.top = randomY + 'px';
-        }
-
-        function accept() {
-            const content = document.getElementById('content');
-            const noBtn = document.getElementById('noBtn');
-            if(noBtn) noBtn.remove(); 
-
-            // เพิ่ม Style สำหรับปุ่ม Click โดยเฉพาะ (เพื่อให้ปุ่มดูเด่นและน่ารัก)
-            const style = document.createElement('style');
-            style.innerHTML = `
-                .special-link {
-                    display: inline-block;
-                    margin-top: 15px;
-                    padding: 10px 25px;
-                    background: linear-gradient(45deg, #ff85a1, #ff4d6d);
-                    color: white !important;
-                    text-decoration: none;
-                    border-radius: 30px;
-                    font-weight: bold;
-                    box-shadow: 0 5px 15px rgba(255, 77, 109, 0.4);
-                    transition: all 0.3s ease;
-                    animation: pulse 1.5s infinite;
-                }
-                .special-link:hover {
-                    transform: scale(1.1) translateY(-3px);
-                    box-shadow: 0 8px 20px rgba(255, 77, 109, 0.6);
-                    background: linear-gradient(45deg, #ff4d6d, #ff85a1);
-                }
-                @keyframes pulse {
-                    0% { transform: scale(1); }
-                    50% { transform: scale(1.05); }
-                    100% { transform: scale(1); }
-                }
-            `;
-            document.head.appendChild(style);
-
-            content.innerHTML = `
-                <h1 style="font-size: 3.5rem; margin-bottom: 0;">🐱</h1>
-                <h1 style="margin-top: 10px;">เย้! ดีกันแล้วนะ</h1>
-                <p style="margin-bottom: 10px;">เค้าขอโทษที่ทำให้เธอไม่สบายใจนะ<br><b>รักนะหมูน้อย</b></p>
-                
-                <a href="https://www.facebook.com/story.php?story_fbid=1975404950067208&id=100027931660555&rdid=XqlIvVkJB9vX8rVf#" 
-                   class="special-link" target="_blank">
-                   👉 ลองจิ้มตรงนี้ดู 👈
-                </a>
-                <br>
-                <img src="https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExNGpnMWc0cDd4dnA1bWJ3aHRpd3luZTRjdXVlanRiNGt4cm5wanFpcSZlcD12MV9naWZzX3RyZW5kaW5nJmN0PWc/MDJ9IbxxvDUQM/giphy.gif" 
-                     width="180" style="border-radius:20px; margin-top:20px; box-shadow: 0 5px 15px rgba(0,0,0,0.1);">
-            `;
-            
-            setInterval(spawnHeart, 300);
-        }
-
-        function spawnHeart() {
-            const heart = document.createElement('div');
-            heart.classList.add('heart');
-            heart.innerHTML = '❤️';
-            heart.style.left = Math.random() * 100 + 'vw';
-            heart.style.fontSize = (Math.random() * 20 + 20) + 'px';
-            heart.style.opacity = Math.random();
-            document.body.appendChild(heart);
-            
-            setTimeout(() => heart.remove(), 4000);
-        }
-    </script>
 </body>
 </html>
-
-
-                
- 
-
